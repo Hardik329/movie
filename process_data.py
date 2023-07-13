@@ -4,19 +4,11 @@
 import numpy as np
 import pandas as pd
 
-
-
 movies = pd.read_csv('tmdb_5000_movies.csv')
 credits = pd.read_csv('tmdb_5000_credits.csv')
 
 
-
-
-
 movies = movies.merge(credits,on='title')
-
-
-
 movies = movies[['movie_id','revenue','popularity','vote_average','vote_count','title','overview','genres','keywords','cast','crew']]
 
 movies.dropna(inplace=True)
