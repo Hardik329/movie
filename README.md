@@ -1,4 +1,4 @@
-### Movie Recommendation System
+# Movie Recommendation System
 
 This recommnedation system filters movies based on genre and recommends movies based on any previous movie that you liked. It also lets you search for movies by keywords that can be anything ranging from the characters/cast of the movie to anything related to or happening in the movie. 
 
