@@ -3,7 +3,6 @@ import streamlit as st
 import requests
 import pandas as pd
 
-print(pd.__version__)
 
 
 def fetch_poster(movie_id):
@@ -62,10 +61,18 @@ def recommend(movie):
 
     return recommended_movie_names,recommended_movie_posters
 
+@st.cache_data
+def load_data():
+    movies = pd.read_pickle(open('movie_list.pkl','rb'))
+    similarity = pd.read_pickle(open('similarity.pkl','rb'))
+    return (movies,similarity)
+    
+
 
 st.header('Movie Recommendations')
-movies = pd.read_pickle(open('movie_list.pkl','rb'))
-similarity = pd.read_pickle(open('similarity.pkl','rb'))
+
+(movies,similarity) = load_data()
+
 
 movie_list = movies['title'].values
 selected_movie = st.selectbox(
