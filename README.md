@@ -5,13 +5,13 @@ This recommnedation system filters movies based on genre and recommends movies b
 
 ## Steps to Run
 
-To run the application, first clone this repository in your system.
-git clone https://github.com/Hardik329/movie.git
+To run the application, first clone this repository in your system
+```git clone https://github.com/Hardik329/movie.git```
 
 Then open the directory of the project and install the required modules.
-pip install -r requirements.txt
+```pip install -r requirements.txt```
 
 Now run the server 
-streamlit run app.py
+```streamlit run app.py```
 
 That's it! Your app is running!
